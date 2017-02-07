@@ -18,9 +18,9 @@
     }, 
     {
       "Datasource": {
-        "file": "http://data.openstreetmapdata.com/land-polygons-split-3857.zip"
+        "file": "http://data.openstreetmapdata.com/land-polygons-split-3857.zip",
         "type": "shape",
-        "id": "land-high", 
+        "id": "land-high"
       }, 
       "class": "", 
       "geometry": "polygon", 
