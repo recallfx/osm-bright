@@ -545,3 +545,43 @@ roads_gen0 = UnionView(
     ),
     mappings = [railways_gen0, mainroads_gen0, motorways_gen0],
 )
+
+point_addresses = Points(
+    name = 'point_addresses',
+    with_type_field = False,
+    fields = (
+        ('addr:street', String()),
+        ('addr:city', String()),
+        ('addr:housenumber', String()),
+    ),
+    mapping = {
+        'addr:housenumber': (
+            '__any__',
+        ),
+    }
+)
+
+polygon_addresses = Polygons(
+    name = 'polygon_addresses',
+    with_type_field = False,
+    fields = (
+        ('addr:street', String()),
+        ('addr:city', String()),
+        ('addr:housenumber', String()),
+    ),
+    mapping = {
+        'addr:housenumber': (
+            '__any__',
+        ),
+    }
+)
+
+addresses = UnionView(
+    name = 'addresses',
+    fields = (
+        ('addr:street', String()),
+        ('addr:city', String()),
+        ('addr:housenumber', String()),
+    ),
+    mappings = [point_addresses, polygon_addresses],
+)
