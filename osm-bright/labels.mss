@@ -468,4 +468,21 @@
   [zoom>=17] { point-file:url('img/icon/rail-18.png'); }
 }
 
+
+/* ================================================================== */
+/* HOUSE LABELS
+/* ================================================================== */
+
+#house_label[zoom >= 16] {
+    text-name: '[addr:housenumber]';
+    text-halo-radius: 1;
+    text-face-name:@sans;
+    text-size: 9;
+    text-placement:interior;
+    text-min-distance: 1;
+    text-wrap-width: 0;
+    text-fill: @other_text;
+    text-halo-fill: @other_halo;
+}
+
 /* ****************************************************************** */
