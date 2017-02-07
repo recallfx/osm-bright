@@ -1,4 +1,4 @@
-OSM Bright
+OSM Bright Yellow
 ==========
 
 ![screenshot](https://raw.github.com/mapbox/osm-bright/master/preview.png)
