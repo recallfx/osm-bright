@@ -101,6 +101,9 @@ come in as well.
     line-color: fadeout(@land,50%);
     [bridge=1] { line-color: @secondary_case * 0.8; }
   }
+  [stylegroup='noauto']{
+	    line-color: @land;
+  }
   [tunnel=1] { line-dasharray: 3,3; }        
   /* -- widths -- */
   [zoom=11] {
@@ -291,12 +294,11 @@ come in as well.
 #bridge[render='2_line'][zoom>=14][zoom<=20]{
   /* -- colors & styles -- */
   [stylegroup='noauto'] {
-    line-color: @land;
+    line-color: darken(@land, 10%);
     line-width: 0;
     line-join: round;
   }
   [stylegroup='railway'] {
-    line-color: @land;
     line-join: round;
   }
   /* -- widths -- */
